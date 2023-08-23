@@ -746,7 +746,7 @@
                                 <div class="sportsmagazine-fancy-title"><h2>Next Match</h2></div>
                                 <div class="widget_next_match_title">
                                     <h5>Championship Quarter Finals</h5>
-                                    <span>Saturday, May 17th, 2017</span>
+                                    <span id='date-time'></span>
                                 </div>
                                 <ul>
                                     <li>
@@ -770,7 +770,7 @@
                                     <h6>Game Countdown</h6>
                                     <div id="sportsmagazine-countdown"></div>
                                 </div>
-                                <a href="fixture.html" class="widget_match_btn">Buy Ticket Now</a>
+                                <a href="fixture.html" class="widget_match_btn">Watch Live Now</a>
                             </div>
                             <!--// Widget Next Match \\-->
 
@@ -887,6 +887,12 @@
     <script type="text/javascript" src="script/progressbar.js"></script>
     <script type="text/javascript" src="script/counter.js"></script>
     <script type="text/javascript" src="script/functions.js"></script>
+
+
+    <script>
+        var dt = new Date();
+        document.getElementById('date-time').innerHTML=dt;
+        </script>
 
   </body>
 
