@@ -482,14 +482,14 @@ jQuery(document).ready(function($) {
     //***************************
     // Countdown Function
     //***************************
-    jQuery(function() {
-        var austDay = new Date('November 5, 2023 15:37:25');
-        austDay = new Date(austDay.getFullYear() + 2, 1 - 1, -600);
-        jQuery('#sportsmagazine-countdown,#sportsmagazine-game-countdown,#sportsmagazine-banner-countdown').countdown({
-            until: austDay
-        });
-        jQuery('#year').text(austDay.getFullYear());
-    });
+    // jQuery(function() {
+    //     var austDay = new Date('Nov 5, 2023 15:37:25');
+    //     austDay = new Date(austDay.getFullYear() + 0, 1 - 1, -600);
+    //     jQuery('#sportsmagazine-countdown,#sportsmagazine-game-countdown,#sportsmagazine-banner-countdown').countdown({
+    //         until: austDay
+    //     });
+    //     jQuery('#year').text(austDay.getFullYear());
+    // });
     
 
 });

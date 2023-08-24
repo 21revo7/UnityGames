@@ -791,7 +791,12 @@
                                 </ul>
                                 <div class="widget_match_countdown">
                                     <h6>Game Countdown</h6>
-                                    <div id="sportsmagazine-countdown"></div>
+                                    <div >
+                                        <h3 id="sportsmagazine-countdown"></h3>
+                                        
+                                    </div>
+
+                                    
                                 </div>
                                 <a href="#" class="widget_match_btn">Watch Live Now</a>
                             </div>
@@ -914,7 +919,38 @@
     <script>
         var dt = new Date();
         document.getElementById('date-time').innerHTML=dt;
-        </script>
+    </script>
+
+<script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Nov 5, 2023 09:00:00").getTime();
+    
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+    
+      // Get today's date and time
+      var now = new Date().getTime();
+    
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+    
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+      // Display the result in the element with id="sportsmagazine-countdown"
+      document.getElementById("sportsmagazine-countdown").innerHTML = days + "d " + hours + "h "
+      + minutes + "m " + seconds + "s ";
+    
+      // If the count down is finished, write some text
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("sportsmagazine-countdown").innerHTML = "Let the game begin";
+      }
+    }, 1000);
+    </script>
 
   </body>
 
